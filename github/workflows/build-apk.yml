@@ -1,0 +1,44 @@
+├── .github/workflows/
+│   └── build-apk.yml              # GitHub Actions otomatik APK derleme dosyası
+├── .gitignore                     # build/, .gradle/, .idea/, .DS_Store hariç tutma
+├── .env.example
+├── build.gradle.kts               # Kök Gradle ayarları
+├── settings.gradle.kts            # Proje adı (SadeTV)
+├── gradle.properties
+├── debug.keystore.base64          # Bulut derleme için debug imza dosyası (base64)
+├── gradle/
+│   ├── libs.versions.toml         # Bağımlılık sürümleri
+│   └── wrapper/
+│       └── gradle-wrapper.properties
+└── app/
+    ├── build.gradle.kts           # Uygulama ID (com.aistudio.sadetv.krmxpz) ve modüller
+    └── src/
+        ├── main/
+        │   ├── AndroidManifest.xml
+        │   ├── java/com/example/
+        │   │   ├── MainActivity.kt              # Ana TV Launcher ekranı
+        │   │   ├── WebViewActivity.kt           # TG Dizi Film tam ekran WebView
+        │   │   ├── model/Models.kt              # Kart, video, hava durumu, uygulama modelleri
+        │   │   ├── data/
+        │   │   │   ├── LauncherPrefs.kt         # Ayarlar, sıra, gizli uygulamalar, önbellek
+        │   │   │   ├── WeatherRepository.kt     # Open-Meteo hava durumu (30 dk önbellek)
+        │   │   │   ├── YouTubeRepository.kt     # YouTube RSS + opsiyonel API (30 dk önbellek)
+        │   │   │   └── WallpaperRepository.kt   # Manzara galerisi (Wikimedia/Picsum/API)
+        │   │   ├── tv/TvInputHelper.kt          # Uydu/TIF "TV izle", YouTube ve uygulama açıcı
+        │   │   ├── ui/
+        │   │   │   ├── SmoothTvLayoutManager.kt # ~150 ms yatay kaydırma
+        │   │   │   ├── HomeCardAdapter.kt       # Ana kart satırı adaptörü
+        │   │   │   ├── YouTubeVideoAdapter.kt   # YouTube alt şerit adaptörü
+        │   │   │   ├── AppDrawerDialogs.kt      # Tüm Uygulamalar, Gizleme, TV Giriş Seçici
+        │   │   │   └── SettingsDialogs.kt       # Ayarlar, Hızlı Menü, Şehir, Arka Plan seçici
+        │   │   ├── remote/PhoneSetupServer.kt   # Telefondan Wi-Fi kurulum sunucusu + QR kod
+        │   │   └── util/TvImageLoader.kt        # Düşük RAM RGB_565 görsel ve önbellek yöneticisi
+        │   └── res/
+        │       ├── layout/                      # activity_main, activity_webview, kartlar, diyaloglar
+        │       ├── drawable/                    # Odak kenarlıkları, ikonlar, varsayılan manzara
+        │       ├── drawable-xhdpi/tv_banner.png # Android TV ana ekran banner'ı
+        │       ├── font/                        # plus_jakarta_sans.ttf, inter.ttf
+        │       ├── mipmap-*/                    # SadeTV uygulama ikonları
+        │       └── values/                      # colors.xml, strings.xml, themes.xml
+        └── test/java/com/example/
+            └── ExampleRobolectricTest.kt        # Ana ekran & kart sırası testleri
