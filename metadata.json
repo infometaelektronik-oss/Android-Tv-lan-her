@@ -2,5 +2,7 @@
   "name": "SadeTV",
   "description": "Ultra-hafif, 1 GB RAM Android TV cihazları ve yaşlı kullanıcılar için sade, hızlı ve uzaktan kumanda odaklı özel TV başlatıcısı.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

@@ -2,7 +2,6 @@ package com.example
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebChromeClient
@@ -12,6 +11,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.ProgressBar
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.example.data.LauncherPrefs
 
@@ -58,19 +58,17 @@ class WebViewActivity : AppCompatActivity() {
 
         wv.loadUrl(targetUrl)
         wv.requestFocus()
-    }
 
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            val wv = webView
-            if (wv != null && wv.canGoBack()) {
-                wv.goBack()
-                return true
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                val currentWv = webView
+                if (currentWv != null && currentWv.canGoBack()) {
+                    currentWv.goBack()
+                } else {
+                    finish()
+                }
             }
-            finish()
-            return true
-        }
-        return super.onKeyDown(keyCode, event)
+        })
     }
 
     override fun onDestroy() {
