@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="560dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_panel"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:text="@string/settings_phone_setup"
+        android:textColor="@color/tv_text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Telefonunuzla aynı Wi-Fi ağına bağlıyken QR kodu okutun veya tarayıcıdan aşağıdaki adresi açın. Bu pencereyi kapattığınızda sunucu otomatik kapanır."
+        android:textColor="@color/tv_text_secondary"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/ivQrCode"
+        android:layout_width="184dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/white"
+        android:contentDescription="@string/cd_qr_code"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/tvSetupUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:textColor="@color/tv_focus_accent"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnClosePhoneSetup"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_top_pill"
+        android:focusable="true"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/webview_close"
+        android:textAllCaps="false"
+        android:textColor="@color/tv_text_primary"
+        android:textSize="15sp" />
+</LinearLayout>

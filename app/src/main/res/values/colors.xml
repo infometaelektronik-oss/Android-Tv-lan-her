@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tv_bg_void">#FF0B0E14</color>
+    <color name="tv_surface_card">#CC171C26</color>
+    <color name="tv_surface_card_focused">#F2232B38</color>
+    <color name="tv_surface_dialog">#F5131821</color>
+    <color name="tv_surface_chip">#991B222D</color>
+    <color name="tv_border_subtle">#2EFFFFFF</color>
+    <color name="tv_focus_ring">#FFF8FAFC</color>
+    <color name="tv_focus_accent">#FF60A5FA</color>
+    <color name="tv_text_primary">#FFF8FAFC</color>
+    <color name="tv_text_secondary">#FF94A3B8</color>
+    <color name="tv_text_muted">#FF64748B</color>
+    <color name="tv_status_online">#FF34D399</color>
+    <color name="tv_status_offline">#FFF87171</color>
+    <color name="tv_status_amber">#FFFBBF24</color>
+    <color name="tv_brand_youtube">#FFEF4444</color>
+    <color name="tv_brand_live">#FF38BDF8</color>
+    <color name="tv_brand_tgdizi">#FFA78BFA</color>
+    <color name="tv_brand_apps">#FF34D399</color>
+    <color name="tv_brand_cache">#FFF59E0B</color>
+    <color name="tv_brand_resume">#FF60A5FA</color>
+</resources>
